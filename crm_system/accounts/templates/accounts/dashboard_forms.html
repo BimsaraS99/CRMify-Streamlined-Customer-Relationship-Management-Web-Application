@@ -1,0 +1,59 @@
+<!-- This html code contain web forms related to dashboard.html web page -->
+<!-- This html code contail create customer, create order and update customer forms -->
+<!-- Do not change the order of the function -->
+
+<div class="popup_update_order" id="up-1">
+    <div class="popup-content_3">
+        <form action="{% url 'update' %}" method="POST">
+        {% csrf_token %}
+            <button type="button" class="close" aria-label="Close" id="close_bt_3"><span aria-hidden="true">&times;</span></button>     
+            <h3 align="center">Update Order</h3>
+            {{form_order_for_updates}}
+            <input type="text"  hidden id="update_pk" name="pk" class="update_pk" value="bimsara">
+            <input type="submit" value="SAVE" class="btn btn-primary btn-sm btn-block">
+        </form>
+    </div>
+</div>
+
+<div class="popup">
+    <div class="popup-content">
+        <h3 align="center">Add New Customer</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <button type="button" class="close" aria-label="Close" id="close_bt"><span aria-hidden="true">&times;</span></button>     
+            {% for field in form %}
+                {{ field }}
+            {% endfor %}
+            <input type="submit" value="SAVE" class="btn btn-primary btn-sm btn-block">
+        </form>
+    </div>
+</div>
+
+<div class="popup_2">
+    <div class="popup-content_2">
+        <form action="" method="POST">
+        {% csrf_token %}
+            <button type="button" class="close" aria-label="Close" id="close_bt_2"><span aria-hidden="true">&times;</span></button>     
+            <h3 align="center">Add New Order</h3>
+            {{form_order}}
+            <input type="submit" value="SAVE" class="btn btn-primary btn-sm btn-block">
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
+        </div>
+        <div class="modal-body">
+            Are you sure you want to delete this order information ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+          <button type="button" class="btn btn-primary" id="confirmBtn">OK</button>
+        </div>
+      </div>
+    </div>
+</div>

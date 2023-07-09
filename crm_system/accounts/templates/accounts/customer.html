@@ -1,0 +1,74 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+{% csrf_token %}
+{% load static %}
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>Customer : <b>{{name}}</b></h5> <hr>
+            <button class="btn btn-outline-info btn-sm btn-block" id='cus_up_bt'>Update Customer</button>
+            <a class="btn btn-outline-danger btn-sm btn-block" id='cus_del_bt' href= "{% url 'remove_cus' pk %}">Delete Customer</a>
+        </div>
+    </div>
+
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>Customer Details:</h5> <hr>
+            <p>Email: <b>{{email}}</b></p>
+            <p>Phone: <b>{{phone}}</b></p>
+        </div>
+    </div>
+
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>Total Orders:</h5> <hr>
+            <h1 style="text-align:center; padding:10px">{{total_orders}}</h1>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col">
+        <div class="card card-body">
+            <form method="get">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div><br>
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Date Orderd</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                    <th>Remove</th>
+                </tr>
+                {% for order in orders %}
+                    <tr>
+                        <td>{{order.product.name}}</td>
+                        <td>{{order.product.category}}</td>
+                        <td>{{order.date_created}}</td>
+                        <td>{{order.status}}</td>
+                        <td><a class="btn btn-sm btn-info" href="">Update</a></td>
+                        <td><a class="btn btn-sm btn-danger"href="">Remove</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% include 'accounts/customer_forms.html' %}
+<script src="{% static 'js/script_customer.js' %}"></script>
+
+{% endblock %}

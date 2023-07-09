@@ -1,0 +1,16 @@
+<!-- This html code contain web forms related to product.html web page -->
+<!-- This html code contail product adding form -->
+
+<div class="popup_product">
+    <div class="popup-content_product">
+        <h3 align="center">Add New Product</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <button type="button" class="close" aria-label="Close" id="close_bt_pro"><span aria-hidden="true">&times;</span></button>     
+                {% for input in input_tags %}
+                    {{input}}
+                {% endfor %}
+            <input type="submit" value="SAVE" class="btn btn-primary btn-sm btn-block">
+        </form>
+    </div>
+</div>

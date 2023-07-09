@@ -1,0 +1,171 @@
+body{
+    background-color: #ebeff5;
+}
+
+#total-orders{
+    background-color: #4cb4c7;
+}
+
+#orders-delivered{
+    background-color: #7abeCC;
+}
+
+#orders-pending{
+    background-color: #e7a9a9;
+}
+
+.popup {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+}
+
+.popup-content {
+        height: 300px;
+        width:600px;
+        background: #ffff;
+        padding: 20px;
+        border-radius: 5px;
+        position: relative;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+
+input{
+        margin: 20px auto;
+        display: block;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid;
+        border-radius: 10px;
+    }
+
+.close{
+        position:absolute;
+        top:8px;
+        right:15px;
+    }
+
+/*start secound style list for popup_2*/
+
+.popup_2 {
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+  }
+
+.popup-content_2 {
+    height: 350px;
+    width:600px;
+    background: #ffff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+select {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+option {
+    padding: 10px;
+  }
+  
+option:checked {
+    font-weight: bold;
+  }
+  
+input:required:invalid {
+    border-color: rgb(247, 145, 145);
+  }
+  
+input:required:valid {
+    border-color: #ccc;
+  }
+
+  /* Style for required field indicator */
+
+.popup_product {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content_product {
+  height: 95%;
+  width:550px;
+  background: #ffff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Style for required field indicator */
+
+.popup_update_order {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content_3 {
+  height: 350px;
+  width:600px;
+  background: #ffff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Style for required field indicator */
+
+.cus_update_popup {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.cus_update_popup-content {
+    height: 300px;
+    width:600px;
+    background: #ffff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
